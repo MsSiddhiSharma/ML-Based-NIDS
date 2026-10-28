@@ -1,0 +1,17 @@
+packet_no,timestamp,timestamp_iso,src_ip,dst_ip,src_port,dst_port,protocol,ip_version,captured_len,original_len,ip_total_len,ttl,tcp_flags,src_mac,dst_mac,parse_status,errors
+1,1761600000.0,2025-10-27T21:20:00.000000+00:00,192.168.1.10,93.184.216.34,40000,80,TCP,4,54,54,40,64,ACK,02:00:00:00:00:01,02:00:00:00:00:fe,ok,
+2,1761600000.01,2025-10-27T21:20:00.010000+00:00,,,,,,,0,0,,,,,,malformed,empty packet (0 bytes captured)
+3,1761600000.02,2025-10-27T21:20:00.020000+00:00,,,,,,,5,5,,,,,,malformed,truncated Ethernet header (5/14 bytes)
+4,1761600000.03,2025-10-27T21:20:00.030000+00:00,,,,,IPv4,,20,20,,,,02:00:00:00:00:01,02:00:00:00:00:fe,malformed,truncated IPv4 header (6/20 bytes)
+5,1761600000.04,2025-10-27T21:20:00.040000+00:00,192.168.1.10,93.184.216.34,1234,80,TCP,4,54,54,40,64,SYN,02:00:00:00:00:01,02:00:00:00:00:fe,malformed,invalid IPv4 header length 12 (<20)
+6,1761600000.05,2025-10-27T21:20:00.050000+00:00,192.168.1.10,93.184.216.34,5555,443,TCP,4,74,1514,1500,64,"ACK,PSH",02:00:00:00:00:01,02:00:00:00:00:fe,partial,IPv4 total length 1500 exceeds captured bytes 60 (truncated capture)
+7,1761600000.06,2025-10-27T21:20:00.060000+00:00,192.168.1.10,93.184.216.34,,,TCP,4,36,54,40,64,,02:00:00:00:00:01,02:00:00:00:00:fe,partial,IPv4 total length 40 exceeds captured bytes 22 (truncated capture); truncated TCP header; ports unavailable
+8,1761600000.07,2025-10-27T21:20:00.070000+00:00,192.168.1.10,93.184.216.34,6000,8080,TCP,4,40,54,40,64,,02:00:00:00:00:01,02:00:00:00:00:fe,partial,IPv4 total length 40 exceeds captured bytes 26 (truncated capture); truncated TCP header; flags unavailable
+9,1761600000.08,2025-10-27T21:20:00.080000+00:00,,,,,ETH-0x88cc,,37,37,,,,02:00:00:00:00:01,01:80:c2:00:00:0e,partial,non-IP EtherType 0x88cc; no IP/port fields
+10,1761600000.09,2025-10-27T21:20:00.090000+00:00,192.168.1.10,93.184.216.34,,,UDP,4,66,66,52,64,,02:00:00:00:00:01,02:00:00:00:00:fe,partial,non-first IPv4 fragment (offset 1480); ports unavailable
+11,,,192.168.1.10,93.184.216.34,40002,22,TCP,4,54,54,40,64,ACK,02:00:00:00:00:01,02:00:00:00:00:fe,partial,timestamp fraction 4000000000 out of range
+12,1761600000.11,2025-10-27T21:20:00.110000+00:00,,,,,IPv6,,39,62,,,,02:00:00:00:00:01,02:00:00:00:00:02,malformed,truncated IPv6 header (25/40 bytes)
+13,1761600000.12,2025-10-27T21:20:00.120000+00:00,192.168.1.10,93.184.216.34,,,IP-PROTO-253,4,42,42,28,64,,02:00:00:00:00:01,02:00:00:00:00:fe,ok,
+14,1761600000.13,2025-10-27T21:20:00.130000+00:00,192.168.1.10,93.184.216.34,40003,25,TCP,4,54,20,40,64,ACK,02:00:00:00:00:01,02:00:00:00:00:fe,partial,captured length 54 > original length 20
+15,1761600000.14,2025-10-27T21:20:00.140000+00:00,,,,,ARP,,24,24,,,,02:00:00:00:00:01,ff:ff:ff:ff:ff:ff,malformed,truncated ARP packet
+16,1761600000.15,2025-10-27T21:20:00.150000+00:00,192.168.1.10,93.184.216.34,40004,8443,TCP,4,54,54,40,64,ACK,02:00:00:00:00:01,02:00:00:00:00:fe,ok,

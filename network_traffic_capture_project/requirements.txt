@@ -1,0 +1,1 @@
+# No third-party dependencies. Offline parsing uses the Python standard library.
